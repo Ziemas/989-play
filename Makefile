@@ -8,7 +8,10 @@
 
 EE_BIN = play.elf
 EE_OBJS = play.o
-EE_LIBS = -lgskit -ldmakit -lgskit_toolkit
+
+EE_CFLAGS += -std=c99
+
+EE_LIBS = -lgskit -ldmakit -lgskit_toolkit -ldebug
 EE_INCS += -I$(PS2DEV)/gsKit/include
 EE_LDFLAGS += -L$(PS2DEV)/gsKit/lib -L$(PS2SDK)/ports/lib
 
